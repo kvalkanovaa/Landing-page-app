@@ -1,0 +1,133 @@
+.header-custom-banner {
+  background-image: url('assets/images/Landing-page-bg-img.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1120px;
+}
+
+.header-custom-banner .img-fluid {
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.custom-terminal-wrapper {
+  bottom: -25%;
+  left: 30%;
+}
+
+.custom-ul {
+  list-style-position: inside;
+  padding-left: 0;
+  width: 260px;
+  margin-bottom: 18rem;
+  background-image: url('assets/images/ul-background.jpg');
+}
+
+.superscript {
+  font-size: 0.5rem;
+  vertical-align: super;
+}
+
+.superscript-big {
+  font-size: 1rem;
+  vertical-align: super;
+}
+
+.price-bubble {
+  background-image: url('assets/images/bubble-background.jpg');
+  border-radius: 50% 50% 0 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding-left: 1.2rem;
+  line-height: 0.7;
+}
+
+.bubble-wrapper {
+  place-content: center;
+}
+
+.price-text {
+  line-height: 0.7;
+}
+
+.small-text {
+  font-size: xx-small !important;
+}
+
+@media (max-width: 1920px) {
+  .header-custom-banner {
+    height: 920px;
+  }
+
+  .custom-ul {
+    margin-bottom: 12rem;
+  }
+}
+
+@media (max-width: 1600px) {
+  .header-custom-banner {
+    height: 770px;
+  }
+
+  .custom-ul {
+    margin-bottom: 10rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .header-custom-banner {
+    height: 670px;
+  }
+
+  .custom-ul {
+    margin-bottom: 7rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-custom-banner {
+    height: 470px;
+  }
+
+  .custom-heading {
+    font-size: x-large;
+  }
+
+  .custom-subheading {
+    font-size: medium;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-custom-banner {
+    height: 370px;
+  }
+
+  .custom-terminal-wrapper,
+  .custom-heading,
+  .custom-subheading,
+  .custom-button {
+    display: none !important;
+  }
+
+  .price-bubble {
+    top: -10%;
+    left: -15%;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-custom-banner {
+    height: 270px;
+  }
+}
+
+#benefits {
+  background-image: url('assets/images/Landing-page-bg.jpg');
+  background-position: center center;
+  background-size: cover;
+}
