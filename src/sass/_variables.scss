@@ -1,5 +1,7 @@
 /* MAIN COLORS */
 $blue: #058ff9;
+$gray: #d3d3d3;;
+$dark-gray: #363636;
 
 /* Bootstrap Colors */
 $primary: $blue;
@@ -7,6 +9,8 @@ $primary: $blue;
 /* Bootstrap Theme Colors */
 $theme-colors: (
   'primary': $primary,
+  'secondary': $gray,
+  'dark': $dark-gray,
 );
 
 /* FONT FAMILY */

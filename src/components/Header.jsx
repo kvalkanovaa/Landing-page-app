@@ -1,4 +1,4 @@
-import logo from '../assets/svgs/myPos-logo-white.svg';
+import logo from '../assets/svgs/myPos-logo.svg';
 import POSTerminal from '../assets/images/POS-terminal.png';
 
 const Header = () => {
@@ -61,7 +61,7 @@ const Header = () => {
         <div className="d-flex flex-column justify-content-center align-items-center gap-2">
           <h1 className="text-center">Say &quot;YES&quot; to every payment</h1>
           <h5 className="text-center">No commitment. No monthly fees.</h5>
-          <button className="col-10 btn btn-primary rounded-pill px-1 py-2">
+          <button className="col-10 btn btn-primary rounded-pill px-1 py-2 text-white">
             LEARN MORE
           </button>
           <div className="bubble-wrapper d-flex position-relative mt-5">
