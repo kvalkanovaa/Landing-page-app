@@ -1,18 +1,33 @@
 /* MAIN COLORS */
+$white: #ffffff;
+$black: #000000;
 $blue: #058ff9;
-$gray: #d3d3d3;;
+$gray: #d3d3d3;
 $dark-gray: #363636;
 
 /* Bootstrap Colors */
 $primary: $blue;
+$secondary: $gray;
 
 /* Bootstrap Theme Colors */
 $theme-colors: (
   'primary': $primary,
-  'secondary': $gray,
+  'secondary': $secondary,
+  'white': $white,
   'dark': $dark-gray,
+  'black': $black,
 );
 
 /* FONT FAMILY */
 $font-family-base: 'Open Sans', sans-serif;
+
+/* TOOLTIP */
+$tooltip-max-width: 270px;
+$tooltip-color: $black;
+$tooltip-bg: $white;
+$tooltip-opacity: 1;
+$tooltip-arrow-width: 2.5rem;
+$tooltip-arrow-height: 1.25rem;
+$tooltip-arrow-color: $tooltip-bg;
+
 

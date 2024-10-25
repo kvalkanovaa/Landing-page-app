@@ -1,3 +1,22 @@
+// The scss will typically be separated into different files for better organization
+// but for this project, I've put everything in one file for simplicity
+
+@mixin price-bubble(
+  $size: 120px,
+  $border-radius: 50% 50% 0 50%,
+  $padding-left: 1.5rem
+) {
+  background-image: url('assets/images/gradient-background.jpg');
+  background-size: cover;
+  border-radius: $border-radius;
+  width: $size;
+  height: $size;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding-left: $padding-left;
+  line-height: 0.7;
+}
 .header-custom-banner {
   background-image: url('assets/images/Landing-page-bg-img.png');
   background-position: center center;
@@ -19,9 +38,9 @@
 .custom-ul {
   list-style-position: inside;
   padding-left: 0;
-  width: 260px;
-  margin-bottom: 18rem;
-  background-image: url('assets/images/ul-background.jpg');
+.price-bubble {
+  @include price-bubble;
+}
 }
 
 .superscript {
@@ -34,28 +53,106 @@
   vertical-align: super;
 }
 
-.price-bubble {
-  background-image: url('assets/images/bubble-background.jpg');
-  border-radius: 50% 50% 0 50%;
-  width: 90px;
-  height: 90px;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  padding-left: 1.2rem;
-  line-height: 0.7;
+// =================== Main wrapper styles ===================
+#hero-wrapper {
+  background-image: url('assets/images/Landing-page-bg.jpg');
+  background-position: center 20%;
+  background-size: cover;
 }
 
-.bubble-wrapper {
-  place-content: center;
+// =================== Benefits section styles ===================
+// Would have used img-fluid but it's not working properly since the images are different sizes
+// Please check explanation in Benefits.jsx
+.benefit-img {
+  width: 118px;
+  height: 104px;
+}
+
+// =================== Payment terminals section styles ===================
+.tooltip {
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.terminal-wrapper {
+  position: relative;
+
+  .terminal-card {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    // Slight rotation on hover for larger screens
+    &:hover {
+      transform: rotate(-12deg);
+    }
+
+    @media (max-width: 768px) {
+      // Disable hover effect on mobile
+      &:hover {
+        transform: none !important;
+      }
+
+      // Instead apply rotation on tap/click
+      &:active {
+        transform: rotate(-12deg);
+      }
+
+      // Rotation on tap/click for mobile
+      &.rotated {
+        transform: rotate(-12deg);
+      }
+    }
+
+    .blue-bg {
+      position: absolute;
+      bottom: -45%;
+      left: 50%;
+      width: 200px;
+      height: 90%;
+      background-image: url('assets/images/gradient-background.jpg');
+      background-size: cover;
+      z-index: -1;
+      transform: translate(-50%, -50%) rotate(-30deg); // Centers the rectangle behind the terminal
+      opacity: 1;
+      border-radius: 3rem;
+    }
+
+    // Terminal image, with a slight tilt on hover
+    .terminal-img {
+      z-index: 1;
+      position: relative;
+      max-width: 100%;
+      transition: transform 0.3s ease-in-out;
+    }
+}
+
+  .price-bubble {
+    @include price-bubble(90px, 50% 50% 50% 0, 0.7rem);
+    z-index: 2;
+    top: -10%;
+    right: -30%;
+    transition: transform 0.3s ease-in-out;
+
+    @media (max-width: 768px) {
+      left: 80%;
 }
 
 .price-text {
-  line-height: 0.7;
+      font-size: 2rem;
+    }
+
+    .superscript-big {
+      font-size: 0.75rem;
+      vertical-align: super;
 }
 
 .small-text {
-  font-size: xx-small !important;
+      font-size: 0.75rem;
+    }
+  }
+}
 }
 
 @media (max-width: 1920px) {

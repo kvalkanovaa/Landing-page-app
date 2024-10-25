@@ -5,9 +5,11 @@ import Footer from './Footer';
 
 const LandingPage = () => (
   <>
-    <Header />
-    <Benefits />
-    <PaymentTerminals />
+    <div id="hero-wrapper">
+      <Header />
+      <Benefits />
+      <PaymentTerminals />
+    </div>
     <Footer />
   </>
 );
