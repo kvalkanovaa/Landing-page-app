@@ -13,9 +13,11 @@ import googlePay from '../assets/svgs/payment-card-type-google-pay.svg';
 import samsungPay from '../assets/svgs/payment-card-type-pay.svg';
 import yellowPay from '../assets/svgs/payment-card-type-yellow.svg';
 
+// Svgs are not perfectly alligned because of extra space in some svgs,
+// will be fixed in the future or they will be replaced with pngs
 const PaymentCards = () => (
   <div className="row">
-    <ul className="list-unstyled d-flex flex-wrap gap-2 justify-content-center align-items-start w-md-50">
+    <ul className="list-unstyled d-flex flex-wrap gap-2 justify-content-center align-items-start py-4 w-md-50">
       <li>
         <img src={visa} alt="visa" />
       </li>
